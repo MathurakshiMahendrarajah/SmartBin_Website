@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - Smart Dustbin</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="navbar">
@@ -21,9 +21,100 @@
     </div>
   </header>
 
-  <main class="about">
-    <h1>About Our System</h1>
-    <p>This system helps to manage waste by monitoring bin fill levels in real-time and optimizing collection routes.</p>
+  <main class="about-page">
+    <section class="hero">
+      <h1>Smart Dustbin Monitoring System</h1>
+      <p class="subtitle">
+        Revolutionizing urban waste management through IoT technology and real-time monitoring for cleaner, more efficient cities.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Project Overview</h2>
+      <p>
+        Our Smart Dustbin Monitoring System uses cutting-edge IoT technology to transform traditional waste management. 
+        Each dustbin is equipped with ultrasonic sensors that continuously measure fill levels, GPS modules for precise location tracking, 
+        and wireless connectivity for real-time data transmission to our centralized monitoring platform.
+      </p>
+      <p>
+        The system automatically categorizes bins based on fill levels:
+        <strong>Green (0-30%)</strong>,
+        <strong>Yellow (31-70%)</strong>, and
+        <strong>Red (71-100%)</strong>,
+        enabling municipal workers to prioritize collections efficiently and reduce operational costs.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Technologies Used</h2>
+      <div class="grid grid-4">
+        <div class="card">
+          <h3>NodeMCU / ESP32</h3>
+          <p>Microcontroller with built-in Wi-Fi capabilities for data transmission.</p>
+        </div>
+        <div class="card">
+          <h3>Ultrasonic Sensor</h3>
+          <p>HC-SR04 sensor for accurate distance measurement and fill level detection.</p>
+        </div>
+        <div class="card">
+          <h3>GPS Module</h3>
+          <p>Real-time location tracking and mapping integration.</p>
+        </div>
+        <div class="card">
+          <h3>IoT Integration</h3>
+          <p>Firebase real-time database for instant data synchronization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>System Architecture</h2>
+      <div class="grid grid-4">
+        <div class="card">
+          <h4>Sensors</h4>
+          <p>Ultrasonic & GPS</p>
+        </div>
+        <div class="card">
+          <h4>Connectivity</h4>
+          <p>Wi-Fi / GSM</p>
+        </div>
+        <div class="card">
+          <h4>Database</h4>
+          <p>Real-time Sync</p>
+        </div>
+        <div class="card">
+          <h4>Dashboard</h4>
+          <p>Analytics & Maps</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Key Benefits</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h4>Efficient Resource Management</h4>
+          <p>Optimize collection routes and reduce unnecessary trips.</p>
+        </div>
+        <div class="card">
+          <h4>Real-time Monitoring</h4>
+          <p>Get instant alerts when bins need attention.</p>
+        </div>
+        <div class="card">
+          <h4>Cost Reduction</h4>
+          <p>Reduce fuel costs and vehicle wear through smart routing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Implementation Phases</h2>
+      <ol>
+        <li><strong>Prototype Development:</strong> Initial sensor integration and testing with NodeMCU.</li>
+        <li><strong>Pilot Testing:</strong> Deploy 10–20 smart bins in test locations for validation.</li>
+        <li><strong>City-wide Rollout:</strong> Scale to hundreds of bins across the entire municipal area.</li>
+      </ol>
+    </section>
   </main>
 </body>
 </html>
