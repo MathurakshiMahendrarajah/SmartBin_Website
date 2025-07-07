@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Smart Dustbin</title>
-    <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">Smart Dustbin</div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Smart Dustbin</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">Smart Dustbin</div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="analytics.html">Analytics</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" class="active login-btn">Login</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="login-page">
-    <form class="login-form">
-      <h2>Login</h2>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required />
+    <main class="login-container">
+      <div class="login-card">
+        <h2>Login to Municipal Dashboard</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
 
-      <button type="submit">Login</button>
-    </form>
-  </main>
-</body>
+          <button type="submit">Login</button>
+          <p class="note">Only authorized municipal officers can access the dashboard.</p>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
