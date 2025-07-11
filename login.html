@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Smart Dustbin</title>
-    <link rel="stylesheet" href="css/login.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="logo">
-          <img src="assets/logo.png" alt="DustBIn Logo" class="logo-img" />
-        </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="dashboard.html">Dashboard</a>
-          <a href="analytics.html">Analytics</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="login.html" class="active login-btn">Login</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Smart Dustbin</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="DustBIn Logo" class="logo-img" />
       </div>
-    </header>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="active login-btn">Login</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="login-container">
-      <div class="login-card">
-        <h2>Login to Municipal Dashboard</h2>
-        <form>
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required />
+  <main class="login-container">
+    <div class="login-card">
+      <h2>Login to Municipal Dashboard</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
 
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
 
-          <button type="submit">Login</button>
-          <p class="note">Only authorized municipal officers can access the dashboard.</p>
-        </form>
+        <button type="submit">Login</button>
+        <p class="note">Only authorized municipal officers can access the dashboard.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Smart Dustbin System. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
-    </main>
-        <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <p>&copy; 2025 Smart Dustbin System. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-  </body>
+  <script type="module" src="js/login.js"></script>
+</body>
 </html>
