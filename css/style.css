@@ -106,28 +106,173 @@ form {
   text-decoration: underline;
 }
 
-/* ===== Dashboard Page ===== */
+/* ===== Dashboard Page Additions ===== */
 
-.dashboard-container {
-  padding: 40px 0px;
-  background-color: #f4f8f9;
+.stats-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
-.dashboard-header {
+.stat-card {
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
   text-align: center;
-  margin-bottom: 40px;
+  color: white;
+  transition: background 0.3s;
 }
 
-.dashboard-header h1 {
-  font-size: 32px;
-  color: #1abc9c;
-  margin-bottom: 10px;
+.stat-card.blue { background-color: #3498db; }
+.stat-card.red { background-color: #e74c3c; }
+.stat-card.green { background-color: #2ecc71; }
+
+.priority-card, .track-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+.priority-card:hover, .track-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.dashboard-header p {
-  font-size: 16px;
-  color: #555;
+.track-filter-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background: #ccc;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#gps-coords {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.priority-card.red { background: #ffcccc; }
+.priority-card.orange { background: #ffe4b5; }
+.priority-card.green { background: #d0f0c0; }
+
+.stat-card:hover, .filter-btn:hover {
+  background-color: #bbb;
+  opacity: 0.9;
+}
+
+.filter-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.assign-track-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.assign-track-btn:hover {
+  background-color: #2980b9;
+}
+.bin-id {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.progress-container {
+  position: relative;
+  height: 10px;
+  background-color: #d6c8c8;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+}
+.progress-bar {
+  height: 20px;
+  border-radius: 10px;
+}
+.progress-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+
+.progress-bar.red {
+  background-color: #e74c3c;
+}
+.progress-bar.orange {
+  background-color: #f39c12;
+}
+.progress-bar.green {
+  background-color: #2ecc71;
+}
+.bin-id.red {
+  color: #e74c3c;
+}
+.bin-id.orange {
+  color: #f39c12;
+}
+.bin-id.green {
+  color: #2ecc71;
+}
+
+.track-card {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  transition: transform 0.2s;
+}
+.track-card:hover {
+  transform: scale(1.02);
+}
+
+.filter-btn[data-status="available"] {
+  background-color: #2ecc71;
+  color: white;
+}
+.filter-btn[data-status="assigned"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
 
 /* ===== Statistics Cards ===== */
 

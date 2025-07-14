@@ -36,85 +36,70 @@
   </header>
 
   <!-- Main Content -->
-  <main class="dashboard-container">
-    <section class="dashboard-header">
-      <h1>Smart Dustbin Dashboard</h1>
-      <p>Real-time monitoring of waste collection system</p>
-    </section>
+  <!-- Main Content -->
+<main class="dashboard-container">
+  <section class="dashboard-header">
+    <h1>Smart Dustbin Dashboard</h1>
+    <p>Real-time monitoring of waste collection system</p>
+  </section>
 
-    <!-- Statistics Overview -->
-    <section class="stats-grid">
-      <div class="stat-card blue">Total Dustbins: 156</div>
-      <div class="stat-card red">Need Collection: 23</div>
-      <div class="stat-card green">Active Locations: 42</div>
-      <div class="stat-card purple">Recently Emptied: 89</div>
-    </section>
+  <!-- Statistics Overview -->
+  <section class="stats-grid">
+    <div class="stat-card blue" data-type="total">Total Dustbins: 156</div>
+    <div class="stat-card red" data-type="need">Need Collection: 23</div>
+    <div class="stat-card green" data-type="assigned">Assigned Dustbins: 34</div>
+  </section>
 
-    <!-- Map & Priority Collections -->
-    <h2>Live Dustbin Locations</h2>
-    <div class="dashboard-main">
-      
-      <!-- Left: Map -->
-      <div>
-        <h3>Interactive Map View</h3>
-        <p id="gps-coords">GPS Coordinates: 40.7831°, -73.9712°</p>
-        <div class="map-container">
-          <iframe 
-            id="map-frame"
-            src="https://www.google.com/maps?q=40.7831,-73.9712&hl=en&z=15&output=embed"
-            allowfullscreen
-            title="Map">
-          </iframe>
-        </div>
+  <!-- Main Grid: Left Map + Right Track -->
+  <div class="dashboard-main" style="display: flex; gap: 2rem;">
+
+    <!-- LEFT SIDE -->
+    <div style="flex: 2;">
+      <!-- Map View -->
+      <h3>Interactive Map View</h3>
+      <p id="gps-coords">GPS Coordinates: 40.7831°, -73.9712°</p>
+      <div class="map-container">
+        <iframe 
+          id="map-frame"
+          src="https://www.google.com/maps?q=40.7831,-73.9712&hl=en&z=15&output=embed"
+          allowfullscreen
+          title="Map">
+        </iframe>
       </div>
 
-      <!-- Right: Priority Collection Cards -->
-      <div>
-        <h3>Priority Collections</h3>
-
-        <div class="priority-card" data-lat="40.785091" data-lng="-73.968285">
-          <h3>Bin DB001 <span class="badge red">Full</span></h3>
-          <p><strong>Location:</strong> Central Park - Main Gate</p>
-          <p><strong>Fill Level:</strong> 85%</p>
-          <div class="progress-bar">
-            <div class="progress-fill red-fill fill-85"></div>
-          </div>
-          <p><strong>Last Emptied:</strong> 2024-06-02</p>
+      <!-- Priority Collection Section -->
+      <div class="priority-section">
+        <h2 id="bin-heading">Priority Collection</h2>
+        <div id="priority-list">
+          <!-- JS will load 5 bin cards here -->
         </div>
-
-        <div class="priority-card" data-lat="40.752726" data-lng="-73.977229">
-          <h3>Bin DB003 <span class="badge red">Full</span></h3>
-          <p><strong>Location:</strong> Bus Station A</p>
-          <p><strong>Fill Level:</strong> 92%</p>
-          <div class="progress-bar">
-            <div class="progress-fill red-fill fill-92"></div>
-          </div>
-          <p><strong>Last Emptied:</strong> 2024-06-01</p>
-        </div>
-
-        <div class="priority-card" data-lat="40.758896" data-lng="-73.985130">
-          <h3>Bin DB005 <span class="badge yellow">Medium</span></h3>
-          <p><strong>Location:</strong> Shopping Mall</p>
-          <p><strong>Fill Level:</strong> 67%</p>
-          <div class="progress-bar">
-            <div class="progress-fill yellow-fill fill-67"></div>
-          </div>
-          <p><strong>Last Emptied:</strong> 2024-06-02</p>
-        </div>
-
-        <div class="priority-card" data-lat="40.730610" data-lng="-73.935242">
-          <h3>Bin DB002 <span class="badge yellow">Medium</span></h3>
-          <p><strong>Location:</strong> Market Square</p>
-          <p><strong>Fill Level:</strong> 45%</p>
-          <div class="progress-bar">
-            <div class="progress-fill yellow-fill fill-45"></div>
-          </div>
-          <p><strong>Last Emptied:</strong> 2024-06-03</p>
+        <!-- Pagination controls -->
+        <div class="pagination-controls">
+          <button id="prev-btn">←</button>
+          <span id="page-info">Page 1</span>
+          <button id="next-btn">→</button>
         </div>
       </div>
     </div>
-  </main>
 
+    <!-- RIGHT SIDE -->
+    <div style="flex: 1;">
+      <h3>Track Details</h3>
+      <div class="track-filter-buttons">
+        <button class="filter-btn" data-status="available">Available</button>
+        <button class="filter-btn" data-status="assigned">Assigned</button>
+      </div>
+      <div id="track-list">
+        <!-- JS will populate track cards here -->
+      </div>
+    </div>
+
+  </div>
+</main>
+
+  
+  
+  
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
