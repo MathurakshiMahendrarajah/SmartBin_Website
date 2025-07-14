@@ -42,11 +42,11 @@ body {
 
 .nav-links a.active {
   text-decoration: underline;
-  color: #00d4ff;
+  color: #1abc9c;
 }
 
 .login-btn {
-  border: 1px solid #00d4ff;
+  border: 1px solid #1abc9c;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -98,7 +98,7 @@ form {
 }
 
 .contact-card a {
-  color: #007bff;
+  color: #1abc9c;
   text-decoration: none;
 }
 
@@ -182,7 +182,7 @@ form {
 }
 
 .filter-btn.active {
-  background-color: #3498db;
+  background-color: #1abc9c;
   color: white;
 }
 
@@ -196,7 +196,7 @@ form {
 }
 
 .assign-track-btn {
-  background-color: #3498db;
+  background-color: #1abc9c;
   color: white;
   border: none;
   padding: 0.4rem 0.7rem;
@@ -204,7 +204,7 @@ form {
   cursor: pointer;
 }
 .assign-track-btn:hover {
-  background-color: #2980b9;
+  background-color: #1abc9c;
 }
 .bin-id {
   font-size: 1.3rem;

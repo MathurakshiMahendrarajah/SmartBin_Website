@@ -46,11 +46,11 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
   text-decoration: underline;
-  color: #00d4ff;
+  color: #1abc9c;
 }
 
 .login-btn {
-  border: 1px solid #00d4ff;
+  border: 1px solid #1abc9c;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -102,12 +102,12 @@ body {
 }
 
 .login-card input:focus {
-  border-color: #00d4ff;
+  border-color: #1abc9c;
   outline: none;
 }
 
 .login-card button {
-  background: #00d4ff;
+  background: #1abc9c;
   color: white;
   border: none;
   padding: 12px;
@@ -118,7 +118,7 @@ body {
 }
 
 .login-card button:hover {
-  background: #00b3cc;
+  background: #1abc9c;
 }
 
 .note {
