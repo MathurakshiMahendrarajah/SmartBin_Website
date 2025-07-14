@@ -10,6 +10,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
   color: #333;
+  overflow: hidden;
 }
 
 /* Navbar Styles */
@@ -89,10 +90,10 @@ body {
 
 .background-carousel {
   position: absolute;
-  top: 10;
+  top: 0;
   left: 10;
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,10 +104,10 @@ body {
 .bg-img {
   opacity: 1;
   transition: all 1s ease-in-out;
-  height: 80%;
+  height: 85%;
   object-fit: contain;
   position: absolute;
-  top: 10%;
+  top: 12%;
   bottom: 10%;
   border: #000;
   border-radius: 10px;
@@ -131,10 +132,11 @@ body {
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  top: 20%;
   z-index: 2;
-  max-width: 800px;
-  padding: 30px 40px;
+  max-width: 1000px;
+  padding: 20px 20px;
   background-color: rgba(255, 255, 255, 0.8); /* White with 0.8 opacity */
   border-radius: 20px; /* Rounded corners */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* subtle shadow */
@@ -194,10 +196,10 @@ body {
 .footer {
   background-color: #2c3e50;
   color: #ffffff;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   font-size: 14px;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
