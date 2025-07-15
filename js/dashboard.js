@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBtns = document.querySelectorAll(".filter-btn");
   const statCards = document.querySelectorAll(".stat-card");
 const binHeading = document.getElementById("bin-heading");
+document.getElementById("priority-section").scrollIntoView({ behavior: "smooth" });
+
   const updateMap = (lat, lng) => {
     document.getElementById("gps-coords").textContent = `GPS Coordinates: ${lat.toFixed(4)}°, ${lng.toFixed(4)}°`;
     document.getElementById("map-frame").src =
@@ -66,12 +68,13 @@ const binHeading = document.getElementById("bin-heading");
   card.innerHTML = `
   <h3 class="bin-id" style="color: ${color};">Bin ID: ${bin.id}</h3>
   <p>${bin.location}</p>
-  <p class="progress-label">Bin Level: ${bin.fill}</p>
+  <p>Bin Level: ${bin.fill}</p>
+  
   <div class="progress-container">
     <div class="progress-bar ${color}" style="width: ${fillNum}%"></div>
   </div>
-  
 `;
+
 
 
       if (!bin.assigned) {
@@ -160,8 +163,12 @@ const binHeading = document.getElementById("bin-heading");
 
     currentPage = 1;
     renderPriorityBins();
+
+    // Scroll to the bin card section
+    document.getElementById("priority-section").scrollIntoView({ behavior: "smooth" });
   });
 });
+
 
   prevBtn.addEventListener("click", () => {
     if (currentPage > 1) {

@@ -39,7 +39,7 @@ body {
   margin-left: 20px;
   text-decoration: none;
 }
-
+.nav-links a:hover,
 .nav-links a.active {
   text-decoration: underline;
   color: #1abc9c;
@@ -107,6 +107,17 @@ form {
 }
 
 /* ===== Dashboard Page Additions ===== */
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
 
 .stats-grid {
   display: flex;
